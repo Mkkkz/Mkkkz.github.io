@@ -1,0 +1,744 @@
+/* ==========================================================================
+   Miguel Inácio — Portfólio
+   Estilo: escuro, minimalista, roxo como cor de destaque.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variáveis
+   -------------------------------------------------------------------------- */
+:root {
+    --bg: #0a0a0b;
+    --bg-soft: #111113;
+    --bg-card: #151517;
+    --border: #232326;
+    --border-soft: #1a1a1d;
+
+    --text: #e6e6e7;
+    --text-muted: #9a9aa0;
+    --text-faint: #6b6b72;
+
+    --accent: #7c5cff;
+    --accent-soft: rgba(124, 92, 255, 0.12);
+    --accent-hover: #9379ff;
+
+    --radius: 10px;
+    --radius-sm: 6px;
+
+    --max-width: 1080px;
+    --nav-height: 64px;
+
+    --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "Cascadia Code", "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. Utilitários
+   -------------------------------------------------------------------------- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.link {
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.link:hover {
+    color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Botões
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn--primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn--outline {
+    border-color: var(--border);
+    color: var(--text);
+    background: transparent;
+}
+
+.btn--outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--text);
+}
+
+.btn--ghost:hover {
+    color: var(--accent);
+}
+
+.btn--small {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Navbar
+   -------------------------------------------------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+    z-index: 100;
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.navbar__logo {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+}
+
+.navbar__logo-accent {
+    color: var(--accent);
+    margin-left: 4px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar__link {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+}
+
+.navbar__link:hover,
+.navbar__link.is-active {
+    color: var(--text);
+}
+
+.navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar__toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   6. Seções
+   -------------------------------------------------------------------------- */
+.section {
+    padding: 88px 0;
+    border-top: 1px solid var(--border-soft);
+}
+
+.section__header {
+    margin-bottom: 44px;
+}
+
+.section__title {
+    font-size: 1.75rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.section__title::before {
+    content: "/";
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.section__subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+    padding: calc(var(--nav-height) + 80px) 0 88px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.hero__greeting {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero__role {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.hero__text {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 52ch;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero__panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.hero__stat {
+    background: var(--bg-soft);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hero__stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text);
+}
+
+.hero__stat-label {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+}
+
+.hero__stat--highlight .hero__stat-value {
+    color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   8. Sobre
+   -------------------------------------------------------------------------- */
+.about__text p {
+    color: var(--text-muted);
+    max-width: 70ch;
+    margin-bottom: 16px;
+}
+
+.about__text p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. Serviços (O que faço)
+   -------------------------------------------------------------------------- */
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.service {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color 0.15s ease;
+}
+
+.service:hover {
+    border-color: var(--accent);
+}
+
+.service__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service__title::before {
+    content: "▸";
+    color: var(--accent);
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+.service__text {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Tecnologias
+   -------------------------------------------------------------------------- */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.skills__group {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.skills__group-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.skills__list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+.skills__list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   11. Projetos
+   -------------------------------------------------------------------------- */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color 0.15s ease;
+}
+
+.project:hover {
+    border-color: var(--accent);
+}
+
+.project__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.project__title::before {
+    content: "◈";
+    color: var(--accent);
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+.project__description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.project__techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project__techs li {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Experiência (números + timeline)
+   -------------------------------------------------------------------------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat__value {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--accent);
+}
+
+.stat__label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 28px;
+    border-left: 1px solid var(--border);
+}
+
+.timeline__item {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.timeline__item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+}
+
+.timeline__year {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.timeline__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline__text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    max-width: 60ch;
+}
+
+/* --------------------------------------------------------------------------
+   13. Repositórios (GitHub)
+   -------------------------------------------------------------------------- */
+.repos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.repo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    transition: border-color 0.15s ease;
+}
+
+.repo:hover {
+    border-color: var(--accent);
+}
+
+.repo__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.repo__name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+
+.repo__name:hover {
+    color: var(--accent-hover);
+}
+
+.repo__lang {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--text-faint);
+    white-space: nowrap;
+}
+
+.repo__description {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.repo__meta {
+    display: flex;
+    gap: 20px;
+    color: var(--text-faint);
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+}
+
+.repo__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.repo__meta .star::before {
+    content: "★";
+    color: #d4a72c;
+}
+
+.repo__meta .update::before {
+    content: "↻";
+}
+
+.repos__empty,
+.repos__loading,
+.repos__error {
+    grid-column: 1 / -1;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    padding: 24px 0;
+}
+
+/* --------------------------------------------------------------------------
+   14. Contato
+   -------------------------------------------------------------------------- */
+.contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.contact__card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color 0.15s ease;
+}
+
+a.contact__card:hover {
+    border-color: var(--accent);
+}
+
+.contact__label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+}
+
+.contact__value {
+    font-size: 0.95rem;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+/* --------------------------------------------------------------------------
+   15. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 40px 0;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer__brand {
+    font-weight: 700;
+}
+
+.footer__copy {
+    color: var(--text-faint);
+    font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------------------------
+   16. Prefers-reduced-motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
