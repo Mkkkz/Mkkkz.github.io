@@ -7,7 +7,7 @@ Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e Jav
 ```
 │── index.html
 │── 404.html
-│── manifest.webmanifest
+│── manifest.json
 │── robots.txt
 │── sitemap.xml
 │── css/
