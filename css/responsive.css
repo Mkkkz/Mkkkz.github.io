@@ -29,6 +29,19 @@
         padding: 64px 0;
     }
 
+    .notfound__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .notfound__code {
+        font-size: 3.2rem;
+    }
+
+    .notfound__art {
+        order: 2;
+    }
+
     .hero {
         padding: calc(var(--nav-height) + 56px) 0 64px;
     }

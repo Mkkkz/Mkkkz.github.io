@@ -1,0 +1,19 @@
+{
+  "name": "Miguel Inácio — Desenvolvedor Java e Web",
+  "short_name": "Miguel Inácio",
+  "description": "Portfólio de Miguel Inácio, desenvolvedor Java focado em plugins Paper para Minecraft, aplicações web e sistemas para comunidades online.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

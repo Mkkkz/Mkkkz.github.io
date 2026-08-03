@@ -6,6 +6,8 @@ Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e Jav
 
 ```
 │── index.html
+│── 404.html
+│── manifest.webmanifest
 │── robots.txt
 │── sitemap.xml
 │── css/
@@ -14,7 +16,6 @@ Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e Jav
 │── js/
 │     main.js
 │── assets/
-│     images/
 │     icons/
 ```
 
@@ -22,8 +23,10 @@ Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e Jav
 
 - Tema escuro, sem dependências externas nem frameworks.
 - Repositórios públicos carregados via API pública do GitHub.
+- Página 404 personalizada com a identidade visual do portfólio.
 - Responsivo, com foco em desktop.
-- SEO: favicon, meta description, Open Graph, robots e sitemap.
+- SEO: favicon, manifest, meta description, Open Graph, Twitter Cards, theme-color, robots e sitemap.
+- Acessibilidade: foco visível, contraste adequado, aria-labels e lang pt-BR.
 
 ## Publicação
 
