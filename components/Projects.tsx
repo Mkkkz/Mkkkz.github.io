@@ -70,7 +70,10 @@ export default function Projects() {
             O que eu já fiz
           </p>
           <h2 className="text-[clamp(1.9rem,4.5vw,2.8rem)] font-bold leading-[1.15] tracking-tight">
-            Meus trabalhos
+            Meus{" "}
+            <span className="text-gradient font-script text-[1.18em] font-normal tracking-normal">
+              trabalhos
+            </span>
           </h2>
         </header>
 

@@ -47,7 +47,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <h3 className="mb-6 text-[clamp(1.7rem,4vw,2.4rem)] font-bold leading-[1.2] tracking-tight">
-              Vamos <span className="text-gradient">trabalhar juntos?</span>
+              Vamos{" "}
+              <span className="text-gradient font-script text-[1.18em] font-normal tracking-normal">
+                trabalhar juntos?
+              </span>
             </h3>
             <p className="mb-8 max-w-[42ch] text-[var(--color-muted)]">
               Estou disponível para conversar sobre projetos, ideias ou oportunidades.

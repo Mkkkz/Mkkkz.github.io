@@ -169,7 +169,10 @@ export default function Page() {
                 Seu projeto, sua ideia
               </p>
               <h2 className="relative mb-4 text-[clamp(1.8rem,4.5vw,2.6rem)] font-bold tracking-tight">
-                Tem uma ideia? <span className="text-gradient">Vamos desenvolvê-la.</span>
+                Tem uma ideia?{" "}
+                <span className="text-gradient font-script text-[1.18em] font-normal tracking-normal">
+                  Vamos desenvolvê-la.
+                </span>
               </h2>
               <p className="relative mx-auto mb-8 max-w-[52ch] text-[var(--color-muted)]">
                 Desde a concepção até o deploy, posso construir seu site ou aplicação com foco em
@@ -216,7 +219,7 @@ export default function Page() {
       <footer className="border-t border-white/10 py-12">
         <div className="mx-auto max-w-[var(--max-width)] px-7">
           <div className="flex flex-wrap items-center justify-between gap-5">
-            <span className="text-base font-bold">Miguel Inácio</span>
+            <span className="font-script text-[1.6rem] font-normal leading-tight">Miguel Inácio</span>
             <nav className="flex flex-wrap gap-[26px]" aria-label="Links de contato">
               <a
                 href="https://github.com/Mkkkz"
