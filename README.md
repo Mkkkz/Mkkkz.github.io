@@ -1,6 +1,6 @@
-# Miguel Inácio — Portfólio
+# Miguel Inácio — Developer
 
-Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e JavaScript.
+Portfólio pessoal de Miguel Inácio. Site estático desenvolvido do zero com HTML5, CSS3 e JavaScript — sem frameworks, sem build, sem dependências. Pronto para GitHub Pages.
 
 ## Estrutura
 
@@ -17,17 +17,21 @@ Portfólio pessoal de Miguel Inácio, desenvolvido do zero com HTML5, CSS3 e Jav
 │     main.js
 │── assets/
 │     icons/
+│     fonts/
 ```
 
-## Recursos
+## Características
 
-- Tema escuro, sem dependências externas nem frameworks.
-- Repositórios públicos carregados via API pública do GitHub.
-- Página 404 personalizada com a identidade visual do portfólio.
-- Responsivo, com foco em desktop.
-- SEO: favicon, manifest, meta description, Open Graph, Twitter Cards, theme-color, robots e sitemap.
-- Acessibilidade: foco visível, contraste adequado, aria-labels e lang pt-BR.
+- Tema escuro editorial e minimalista, com identidade própria.
+- Tipografia auto-hospedada (Manrope + JetBrains Mono), sem CDN.
+- Sem frameworks, bibliotecas ou scripts pesados — JavaScript mínimo.
+- Seções: Sobre, O que faço, Stack, Projetos, Experiência, Como trabalho e Contato.
+- Página 404 com a mesma identidade visual.
+- Responsivo para desktop, tablet e mobile.
+- SEO: meta description, Open Graph, Twitter Cards, theme-color, canonical, manifest, robots.txt e sitemap.xml.
+- Acessibilidade: HTML semântico, foco visível, contraste, navegação por teclado e `lang="pt-BR"`.
+- Animações discretas e respeito a `prefers-reduced-motion`.
 
 ## Publicação
 
-O site é publicado via GitHub Pages na branch `master`.
+Publicado via GitHub Pages na branch `master`. Basta abrir `index.html` para visualizar localmente — não há build nem backend.
