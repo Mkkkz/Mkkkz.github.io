@@ -24,7 +24,10 @@ export default function Page() {
               Seja bem-vindo ao meu site!
             </p>
             <h1 className="mb-[18px] text-[clamp(2.2rem,6.5vw,4rem)] font-bold leading-[1.12] tracking-tight">
-              Olá, sou Miguel Inácio
+              Olá, sou{" "}
+              <span className="font-script text-[1.22em] font-normal tracking-normal">
+                Miguel Inácio
+              </span>
               <span className="text-gradient block">Desenvolvedor full stack</span>
             </h1>
             <p className="mx-auto mb-9 max-w-[52ch] text-[1.1rem] text-[var(--color-muted)]">

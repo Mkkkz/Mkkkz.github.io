@@ -31,6 +31,7 @@
   /* Tipografia */
   --font-sans: "Poppins", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-script: "Great Vibes", cursive;
 
   /* Métricas */
   --radius-2xl: 18px;

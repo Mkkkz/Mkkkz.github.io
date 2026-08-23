@@ -57,7 +57,9 @@ export default function Contact() {
                 <span className="h-2 w-2 rounded-full bg-[var(--color-success)] animate-[var(--animate-ping)]" aria-hidden="true" />
                 Disponível
               </span>
-              <span className="text-[1.05rem] font-bold">Miguel Inácio</span>
+              <span className="font-script text-[1.5rem] font-normal leading-tight">
+                Miguel Inácio
+              </span>
               <span className="text-[0.9rem] text-[var(--color-muted)]">Desenvolvedor Full Stack</span>
               <span className="mt-2 font-mono text-[0.85rem] text-[var(--color-faint)]">
                 Belo Horizonte, MG
