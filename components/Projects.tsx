@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import Reveal from "./Reveal";
 
 interface Project {
-  letter: string;
-  grad: string;
+  image: string;
   badge?: string;
   role: string;
   title: string;
@@ -14,8 +14,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    letter: "H",
-    grad: "bg-[linear-gradient(135deg,#16233f,#2b7fff)]",
+    image: "/assets/images/HavenCloud.png",
     badge: "Novo",
     role: "Plataforma",
     title: "HavenCloud",
@@ -24,8 +23,7 @@ const projects: Project[] = [
     site: "https://havencloud.host",
   },
   {
-    letter: "L",
-    grad: "bg-[linear-gradient(135deg,#1a3d2b,#16a34a)]",
+    image: "/assets/images/LightBux.png",
     role: "Web Platform",
     title: "LightBux",
     desc: "Plataforma web própria para organizar produtos e serviços digitais.",
@@ -33,8 +31,7 @@ const projects: Project[] = [
     site: "https://lightbux.online",
   },
   {
-    letter: "M",
-    grad: "bg-[linear-gradient(135deg,#2a1f3f,#8b5cf6)]",
+    image: "/assets/images/Motter-Cloud.png",
     role: "Website",
     title: "MotterCloud",
     desc: "Projeto web relacionado a cloud e hospedagem.",
@@ -42,8 +39,7 @@ const projects: Project[] = [
     site: "https://mottercloud.vercel.app",
   },
   {
-    letter: "M",
-    grad: "bg-[linear-gradient(135deg,#3f1f1f,#f97316)]",
+    image: "/assets/images/MagmaKz.png",
     role: "Website",
     title: "MagmaKz",
     desc: "Projeto web desenvolvido anteriormente.",
@@ -51,8 +47,7 @@ const projects: Project[] = [
     site: "https://magmakz.online",
   },
   {
-    letter: "Z",
-    grad: "bg-[linear-gradient(135deg,#143a3f,#06b6d4)]",
+    image: "/assets/images/ZokoInfo.png",
     role: "Website",
     title: "ZokoInfo",
     desc: "Projeto web desenvolvido para uma plataforma de informações.",
@@ -81,12 +76,14 @@ export default function Projects() {
           {projects.map((p) => (
             <Reveal key={p.title}>
               <article className="group flex flex-col overflow-hidden rounded-[18px] border border-white/10 bg-[var(--color-card)] transition-all duration-200 hover:-translate-y-[3px] hover:border-white/20 hover:bg-[var(--color-card-hover)]">
-                <div className="relative flex h-[190px] items-center justify-center overflow-hidden">
-                  <div className={`absolute inset-0 flex items-center justify-center ${p.grad}`}>
-                    <span className="text-[4rem] font-extrabold tracking-tight text-white/90">
-                      {p.letter}
-                    </span>
-                  </div>
+                <div className="relative h-[190px] overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt={`Print do projeto ${p.title}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 546px"
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
                   {p.badge && (
                     <span className="absolute left-[14px] top-[14px] rounded-full bg-[var(--color-danger)] px-3 py-[5px] text-[0.68rem] font-bold uppercase tracking-[0.1em] text-white">
                       {p.badge}
