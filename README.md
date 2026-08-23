@@ -1,28 +1,33 @@
 # Miguel Inácio — Developer
 
-Portfólio pessoal de Miguel Inácio, desenvolvido com **Next.js** e **React**, com export estático para GitHub Pages.
+Portfólio pessoal de Miguel Inácio, desenvolvido com **Next.js** e um stack moderno, com export estático para GitHub Pages.
 
 ## Stack
 
-- Next.js (App Router)
-- React
-- CSS puro (sem framework de estilo)
+- **Next.js** (App Router) — renderização e export estático
+- **React** — interface
+- **TypeScript** — tipagem e segurança
+- **Tailwind CSS** v4 — estilização utilitária (config CSS-first)
+- **Framer Motion** — animações e transições
+- **lucide-react** — ícones
 - Fontes auto-hospedadas (Poppins + Great Vibes)
 
 ## Estrutura
 
 ```
 │── app/
-│     layout.js
-│     page.js
-│     not-found.js
+│     layout.tsx
+│     page.tsx
+│     not-found.tsx
 │     globals.css
 │── components/
-│     Navbar.js
-│     Marquee.js
-│     Reveal.js
-│     Projects.js
-│     Contact.js
+│     Navbar.tsx
+│     Marquee.tsx
+│     Reveal.tsx
+│     Projects.tsx
+│     Contact.tsx
+│     icons.tsx
+│     techs.ts
 │── public/
 │     assets/icons/
 │     assets/fonts/
@@ -42,7 +47,7 @@ npm run build   # gera o build estático (pasta out/)
 
 ## Publicação
 
-O deploy é automático via GitHub Actions: ao dar push na branch `master`, o workflow constrói o site e publica na GitHub Pages. Nenhum comando manual é necessário.
+Deploy automático via GitHub Actions: ao dar push na branch `master`, o workflow constrói o site e publica na GitHub Pages. Nenhum comando manual é necessário.
 
 ## Seções
 

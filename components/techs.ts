@@ -1,7 +1,14 @@
 // Logos (paths do Simple Icons) e links oficiais de cada tecnologia.
 // Os ícones são embutidos (auto-hospedados, sem CDN).
 
-export const techs = [
+export interface Tech {
+  name: string;
+  url: string;
+  fill: string;
+  path: string;
+}
+
+export const techs: Tech[] = [
   {
     name: "HTML5",
     url: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
