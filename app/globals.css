@@ -443,9 +443,13 @@ textarea {
     white-space: nowrap;
 }
 
+.marquee:hover .marquee__track {
+    animation-play-state: paused;
+}
+
 .marquee__track {
     display: inline-block;
-    animation: marquee 30s linear infinite;
+    animation: marquee 36s linear infinite;
     will-change: transform;
 }
 
@@ -454,20 +458,27 @@ textarea {
 }
 
 .marquee__group .tech {
-    display: inline-block;
-    margin: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 26px;
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--text-faint);
+    color: var(--text-muted);
     white-space: nowrap;
-    opacity: 0.7;
+    opacity: 0.75;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.marquee__group .tech i {
-    font-style: normal;
-    color: var(--accent);
-    margin-right: 24px;
-    opacity: 0.5;
+.marquee__group .tech:hover {
+    color: var(--text);
+    opacity: 1;
+}
+
+.tech__logo {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
 }
 
 @keyframes marquee {
