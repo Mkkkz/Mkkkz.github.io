@@ -1,6 +1,6 @@
 /* ==========================================================================
    Miguel Inácio — Portfolio
-   JavaScript mínimo: menu mobile, navbar state, scroll reveal.
+   JavaScript mínimo: menu mobile, marquee, scroll reveal, copiar e-mail.
    ========================================================================== */
 (function () {
     "use strict";
@@ -37,19 +37,7 @@
     }
 
     /* ----------------------------------------------------------------
-       Navbar state ao rolar
-       ---------------------------------------------------------------- */
-    var navbar = document.getElementById("navbar");
-    if (navbar) {
-        var onScroll = function () {
-            navbar.classList.toggle("is-scrolled", window.scrollY > 12);
-        };
-        window.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
-    }
-
-    /* ----------------------------------------------------------------
-       Scroll reveal (sem depender de IntersectionObserver se não houver)
+       Scroll reveal
        ---------------------------------------------------------------- */
     var revealEls = document.querySelectorAll("[data-reveal]");
 
@@ -72,5 +60,45 @@
         revealEls.forEach(function (el) {
             el.classList.add("is-visible");
         });
+    }
+
+    /* ----------------------------------------------------------------
+       Copiar e-mail
+       ---------------------------------------------------------------- */
+    var copyBtn = document.getElementById("copyEmail");
+    var emailValue = document.getElementById("emailValue");
+
+    if (copyBtn && emailValue) {
+        copyBtn.addEventListener("click", function () {
+            var text = emailValue.textContent.trim();
+            function done() {
+                copyBtn.textContent = "Copiado!";
+                setTimeout(function () {
+                    copyBtn.textContent = "Copiar";
+                }, 2000);
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done).catch(function () {
+                    fallbackCopy(text, done);
+                });
+            } else {
+                fallbackCopy(text, done);
+            }
+        });
+    }
+
+    function fallbackCopy(text, done) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand("copy");
+        } catch (e) {}
+        document.body.removeChild(ta);
+        done();
     }
 })();

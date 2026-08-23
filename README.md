@@ -1,6 +1,6 @@
 # Miguel Inácio — Developer
 
-Portfólio pessoal de Miguel Inácio. Site estático desenvolvido do zero com HTML5, CSS3 e JavaScript — sem frameworks, sem build, sem dependências. Pronto para GitHub Pages.
+Portfólio pessoal de Miguel Inácio. Site estático desenvolvido com HTML5, CSS3 e JavaScript — sem frameworks, sem build, sem dependências. Pronto para GitHub Pages.
 
 ## Estrutura
 
@@ -22,10 +22,10 @@ Portfólio pessoal de Miguel Inácio. Site estático desenvolvido do zero com HT
 
 ## Características
 
-- Tema escuro editorial e minimalista, com identidade própria.
-- Tipografia auto-hospedada (Manrope + JetBrains Mono), sem CDN.
-- Sem frameworks, bibliotecas ou scripts pesados — JavaScript mínimo.
-- Seções: Sobre, O que faço, Stack, Projetos, Experiência, Como trabalho e Contato.
+- Tema escuro com destaque azul, tipografia Poppins (auto-hospedada, sem CDN).
+- Seções: Hero, marquee de tecnologias, Sobre, Projetos, CTA e Contato.
+- Projetos apresentados em cards com miniatura em gradiente, status e links.
+- Formulário de contato (envia via e-mail, padrão para site estático) e botão copiar e-mail.
 - Página 404 com a mesma identidade visual.
 - Responsivo para desktop, tablet e mobile.
 - SEO: meta description, Open Graph, Twitter Cards, theme-color, canonical, manifest, robots.txt e sitemap.xml.

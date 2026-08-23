@@ -4,50 +4,17 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Tablet & notebook pequeno
+   Notebook pequeno / tablet grande
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-    .hero__grid {
+    .about__grid {
         grid-template-columns: 1fr;
         gap: 48px;
-    }
-
-    .hero__aside {
-        border-top: 1px solid var(--border);
-    }
-
-    .case {
-        grid-template-columns: 1.4fr 1fr;
-    }
-
-    .case__right {
-        text-align: left;
-        grid-column: 1 / -1;
-        border-top: 1px solid var(--border-soft);
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        flex-wrap: wrap;
-    }
-
-    .case__link {
-        margin-top: 0;
     }
 
     .contact__wrap {
         grid-template-columns: 1fr;
         gap: 48px;
-    }
-
-    .exp__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about__grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
     }
 }
 
@@ -67,9 +34,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        background: var(--bg);
+        background: #000;
         border-bottom: 1px solid var(--border);
-        padding: 12px 28px 24px;
+        padding: 10px 28px 20px;
         transform: translateY(-12px);
         opacity: 0;
         visibility: hidden;
@@ -89,14 +56,10 @@
         border-bottom: 1px solid var(--border-soft);
         font-size: 1rem;
     }
-
-    .navbar__github {
-        display: none;
-    }
 }
 
 /* --------------------------------------------------------------------------
-   Mobile
+   Mobile / tablet
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     :root {
@@ -107,64 +70,20 @@
         padding: 0 22px;
     }
 
-    .section__head {
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 40px;
-    }
-
     .hero {
-        padding: calc(var(--nav-height) + 64px) 0 72px;
+        padding: calc(var(--nav-height) + 64px) 0 64px;
     }
 
-    .hero__data {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .hero__data-item {
-        padding: 18px 14px;
-    }
-
-    .hero__data-value {
-        font-size: 1.35rem;
-    }
-
-    .hero__data-label {
-        font-size: 0.66rem;
-        letter-spacing: 0.06em;
-    }
-
-    .services__grid {
+    .projects__grid {
         grid-template-columns: 1fr;
     }
 
-    .stack__grid {
+    .process__grid {
         grid-template-columns: 1fr;
     }
 
-    .case {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .case__right {
-        grid-column: 1;
-        justify-content: flex-start;
-    }
-
-    .process__item {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .process__body {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .process__text {
-        text-align: left;
+    .cta {
+        padding: 48px 28px;
     }
 
     .footer__inner {
@@ -178,8 +97,8 @@
    Telefone
    -------------------------------------------------------------------------- */
 @media (max-width: 560px) {
-    .hero__title {
-        font-size: clamp(2.2rem, 11vw, 3rem);
+    .hero__stats {
+        grid-template-columns: 1fr;
     }
 
     .hero__actions {
@@ -191,43 +110,18 @@
         justify-content: center;
     }
 
-    .hero__data {
-        grid-template-columns: 1fr 1fr;
+    .contact__email {
+        flex-wrap: wrap;
     }
 
-    .hero__data-item:nth-child(3) {
-        grid-column: 1 / -1;
-        border-left: none;
-        border-top: 1px solid var(--border);
-        padding-top: 18px;
-    }
-
-    .exp__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service {
-        padding: 30px 24px;
-    }
-
-    .stack__group {
-        padding: 28px 24px;
-    }
-
-    .case {
-        padding: 30px 0;
-    }
-
-    .case__head .case__title {
-        font-size: 1.4rem;
+    .contact__email-value {
+        width: 100%;
+        margin-left: 0;
+        order: 3;
     }
 
     .footer__links {
         flex-wrap: wrap;
         gap: 18px;
-    }
-
-    .contact__link-value {
-        font-size: 0.9rem;
     }
 }

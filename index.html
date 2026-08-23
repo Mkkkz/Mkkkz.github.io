@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b0d0c">
+    <meta name="theme-color" content="#000000">
 
     <!-- SEO -->
     <title>Miguel Inácio — Developer</title>
-    <meta name="description" content="Miguel Inácio, desenvolvedor full stack. Desenvolvo sites, aplicações web e sistemas completos, do front-end ao back-end. Rio de Janeiro, Brasil.">
+    <meta name="description" content="Miguel Inácio, desenvolvedor full stack. Desenvolvo sites, aplicações web e sistemas completos, do front-end ao back-end. Belo Horizonte, MG.">
     <meta name="author" content="Miguel Inácio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mkkkz.github.io/">
@@ -40,105 +40,101 @@
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <div class="container navbar__inner">
-            <a href="#topo" class="navbar__logo" aria-label="Início">
-                <span class="navbar__logo-mono">~/</span>
-                Miguel Inácio
-            </a>
+            <a href="#hero" class="navbar__logo">Miguel Inácio</a>
 
             <nav class="navbar__menu" id="menu" aria-label="Navegação principal">
+                <a href="#hero" class="navbar__link">Home</a>
                 <a href="#sobre" class="navbar__link">Sobre</a>
-                <a href="#stack" class="navbar__link">Stack</a>
                 <a href="#projetos" class="navbar__link">Projetos</a>
-                <a href="#servicos" class="navbar__link">Serviços</a>
-                <a href="#contato" class="navbar__link">Contato</a>
+                <a href="#contato" class="navbar__link">Contatos</a>
             </nav>
 
-            <div class="navbar__actions">
-                <a href="https://github.com/Mkkkz" target="_blank" rel="noopener" class="navbar__github">
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5Z"/></svg>
-                    GitHub
-                </a>
-                <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+            <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main id="topo">
+    <main>
 
         <!-- Hero -->
-        <section class="hero" id="hero" aria-label="Apresentação">
-            <div class="container">
-                <p class="hero__badge">
-                    <span class="hero__badge-dot" aria-hidden="true"></span>
-                    Disponível para projetos
+        <section class="hero" id="hero">
+            <div class="container hero__content">
+                <p class="hero__welcome">Seja bem-vindo ao meu site!</p>
+                <h1 class="hero__title">
+                    Olá, sou Miguel Inácio
+                    <span class="highlight">Desenvolvedor full stack</span>
+                </h1>
+                <p class="hero__sub">
+                    Desenvolvo sites, aplicações web e sistemas completos, do front-end ao back-end,
+                    com foco em simplicidade e desempenho.
                 </p>
-
-                <div class="hero__grid">
-                    <div class="hero__content">
-                        <h1 class="hero__title">
-                            Miguel Inácio
-                            <span class="hero__title-role">Developer</span>
-                        </h1>
-                        <p class="hero__text">
-                            Desenvolvo sites, aplicações web e sistemas completos, trabalhando do
-                            front-end ao back-end.
-                        </p>
-                        <div class="hero__actions">
-                            <a href="#projetos" class="btn btn--primary">Ver projetos</a>
-                            <a href="#contato" class="btn btn--outline">Vamos conversar</a>
-                        </div>
-                    </div>
-
-                    <aside class="hero__aside" aria-label="Tecnologias e dados">
-                        <p class="hero__aside-label">Foco técnico</p>
-                        <div class="hero__taglist">
-                            <span class="hero__tag">HTML</span>
-                            <span class="hero__tag">CSS</span>
-                            <span class="hero__tag">JavaScript</span>
-                            <span class="hero__tag">TypeScript</span>
-                            <span class="hero__tag">React</span>
-                            <span class="hero__tag">Next.js</span>
-                            <span class="hero__tag">Node.js</span>
-                            <span class="hero__tag">APIs</span>
-                        </div>
-                        <div class="hero__status">
-                            <div class="hero__status-row">
-                                <span class="hero__status-label">Localização</span>
-                                <span class="hero__status-value">Rio de Janeiro, BR</span>
-                            </div>
-                            <div class="hero__status-row" style="margin-top:12px;">
-                                <span class="hero__status-label">Status</span>
-                                <span class="hero__status-value">Desenvolvendo projetos próprios</span>
-                            </div>
-                        </div>
-                    </aside>
+                <div class="hero__actions">
+                    <a href="#contato" class="btn btn--primary">Vamos conversar</a>
+                    <a href="#sobre" class="btn btn--glass">Sobre mim</a>
                 </div>
 
-                <div class="hero__data" aria-label="Números principais">
-                    <div class="hero__data-item">
-                        <strong class="hero__data-value">15+</strong>
-                        <span class="hero__data-label">Projetos</span>
+                <div class="hero__stats" aria-label="Números principais">
+                    <div class="hero__stat">
+                        <strong class="hero__stat-value">15+</strong>
+                        <span class="hero__stat-label">Projetos desenvolvidos</span>
                     </div>
-                    <div class="hero__data-item">
-                        <strong class="hero__data-value">30+</strong>
-                        <span class="hero__data-label">Clientes</span>
+                    <div class="hero__stat">
+                        <strong class="hero__stat-value">30+</strong>
+                        <span class="hero__stat-label">Clientes atendidos</span>
                     </div>
-                    <div class="hero__data-item">
-                        <strong class="hero__data-value">Full Stack</strong>
-                        <span class="hero__data-label">Front-end + Back-end</span>
+                    <div class="hero__stat">
+                        <strong class="hero__stat-value">Full Stack</strong>
+                        <span class="hero__stat-label">Front-end + Back-end</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sobre -->
+        <!-- Marquee de tecnologias -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track" id="marqueeTrack">
+                <div class="marquee__group">
+                    <span class="tech"><i>✦</i>HTML5</span>
+                    <span class="tech"><i>✦</i>CSS3</span>
+                    <span class="tech"><i>✦</i>JavaScript</span>
+                    <span class="tech"><i>✦</i>TypeScript</span>
+                    <span class="tech"><i>✦</i>React</span>
+                    <span class="tech"><i>✦</i>Next.js</span>
+                    <span class="tech"><i>✦</i>Node.js</span>
+                    <span class="tech"><i>✦</i>Python</span>
+                    <span class="tech"><i>✦</i>Java</span>
+                    <span class="tech"><i>✦</i>PostgreSQL</span>
+                    <span class="tech"><i>✦</i>Docker</span>
+                    <span class="tech"><i>✦</i>Linux</span>
+                    <span class="tech"><i>✦</i>Vercel</span>
+                    <span class="tech"><i>✦</i>Git</span>
+                </div>
+                <div class="marquee__group">
+                    <span class="tech"><i>✦</i>HTML5</span>
+                    <span class="tech"><i>✦</i>CSS3</span>
+                    <span class="tech"><i>✦</i>JavaScript</span>
+                    <span class="tech"><i>✦</i>TypeScript</span>
+                    <span class="tech"><i>✦</i>React</span>
+                    <span class="tech"><i>✦</i>Next.js</span>
+                    <span class="tech"><i>✦</i>Node.js</span>
+                    <span class="tech"><i>✦</i>Python</span>
+                    <span class="tech"><i>✦</i>Java</span>
+                    <span class="tech"><i>✦</i>PostgreSQL</span>
+                    <span class="tech"><i>✦</i>Docker</span>
+                    <span class="tech"><i>✦</i>Linux</span>
+                    <span class="tech"><i>✦</i>Vercel</span>
+                    <span class="tech"><i>✦</i>Git</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sobre + Processo -->
         <section class="section" id="sobre">
             <div class="container">
                 <header class="section__head">
-                    <h2 class="section__title">Sobre</h2>
-                    <span class="section__index">01</span>
+                    <p class="section__eyebrow">Sobre</p>
+                    <h2 class="section__title">Quem sou eu e como trabalho</h2>
                 </header>
                 <div class="about__grid">
                     <div class="about__text">
@@ -155,137 +151,28 @@
                             clientes.
                         </p>
                     </div>
-                    <div class="about__meta">
-                        <div class="about__meta-row">
-                            <span class="about__meta-key">Nome</span>
-                            <span class="about__meta-val">Miguel Inácio</span>
-                        </div>
-                        <div class="about__meta-row">
-                            <span class="about__meta-key">Papel</span>
-                            <span class="about__meta-val">Developer</span>
-                        </div>
-                        <div class="about__meta-row">
-                            <span class="about__meta-key">Foco</span>
-                            <span class="about__meta-val">Front-end · Back-end · Full Stack</span>
-                        </div>
-                        <div class="about__meta-row">
-                            <span class="about__meta-key">Base</span>
-                            <span class="about__meta-val">Rio de Janeiro, BR</span>
-                        </div>
-                        <div class="about__meta-row">
-                            <span class="about__meta-key">Ativo</span>
-                            <span class="about__meta-val">Desenvolvendo</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <hr class="divider" aria-hidden="true">
-
-        <!-- O que faço -->
-        <section class="section" id="servicos">
-            <div class="container">
-                <header class="section__head">
-                    <h2 class="section__title">O que faço</h2>
-                    <span class="section__index">02</span>
-                </header>
-                <div class="services__grid">
-                    <article class="service" data-reveal>
-                        <span class="service__index">01</span>
-                        <h3 class="service__title">Desenvolvimento Web</h3>
-                        <p class="service__text">Sites institucionais, páginas de produto, landing pages e experiências responsivas.</p>
-                    </article>
-                    <article class="service" data-reveal>
-                        <span class="service__index">02</span>
-                        <h3 class="service__title">Aplicações Web</h3>
-                        <p class="service__text">Sistemas web, dashboards, áreas administrativas e ferramentas personalizadas.</p>
-                    </article>
-                    <article class="service" data-reveal>
-                        <span class="service__index">03</span>
-                        <h3 class="service__title">Front-end</h3>
-                        <p class="service__text">Interfaces responsivas, componentes, layouts e experiências focadas em usabilidade.</p>
-                    </article>
-                    <article class="service" data-reveal>
-                        <span class="service__index">04</span>
-                        <h3 class="service__title">Back-end</h3>
-                        <p class="service__text">APIs, autenticação, banco de dados, integrações e lógica de aplicações.</p>
-                    </article>
-                    <article class="service" data-reveal>
-                        <span class="service__index">05</span>
-                        <h3 class="service__title">Full Stack</h3>
-                        <p class="service__text">Projetos completos conectando interface, servidor, banco de dados e serviços externos.</p>
-                    </article>
-                    <article class="service" data-reveal>
-                        <span class="service__index">06</span>
-                        <h3 class="service__title">Deploy e Infraestrutura</h3>
-                        <p class="service__text">Hospedagem, deploy, domínio, Linux e manutenção de aplicações.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider" aria-hidden="true">
-
-        <!-- Stack -->
-        <section class="section" id="stack">
-            <div class="container">
-                <header class="section__head">
-                    <h2 class="section__title">Stack</h2>
-                    <span class="section__index">03</span>
-                </header>
-                <div class="stack__grid">
-                    <div class="stack__group" data-reveal>
-                        <h3 class="stack__group-title">Front-end</h3>
-                        <ul class="stack__list">
-                            <li class="stack__item">HTML5</li>
-                            <li class="stack__item">CSS3</li>
-                            <li class="stack__item">JavaScript</li>
-                            <li class="stack__item">TypeScript</li>
-                            <li class="stack__item">React</li>
-                            <li class="stack__item">Next.js</li>
-                            <li class="stack__item">Vite</li>
-                        </ul>
-                    </div>
-                    <div class="stack__group" data-reveal>
-                        <h3 class="stack__group-title">Back-end</h3>
-                        <ul class="stack__list">
-                            <li class="stack__item">Node.js</li>
-                            <li class="stack__item">Python</li>
-                            <li class="stack__item">Java</li>
-                            <li class="stack__item">Spring</li>
-                            <li class="stack__item">APIs REST</li>
-                        </ul>
-                    </div>
-                    <div class="stack__group" data-reveal>
-                        <h3 class="stack__group-title">Databases</h3>
-                        <ul class="stack__list">
-                            <li class="stack__item">PostgreSQL</li>
-                            <li class="stack__item">MySQL</li>
-                            <li class="stack__item">SQLite</li>
-                            <li class="stack__item">MongoDB</li>
-                            <li class="stack__item">Redis</li>
-                            <li class="stack__item">Supabase</li>
-                        </ul>
-                    </div>
-                    <div class="stack__group" data-reveal>
-                        <h3 class="stack__group-title">DevOps</h3>
-                        <ul class="stack__list">
-                            <li class="stack__item">Linux</li>
-                            <li class="stack__item">Docker</li>
-                            <li class="stack__item">Git</li>
-                            <li class="stack__item">GitHub</li>
-                            <li class="stack__item">Vercel</li>
-                            <li class="stack__item">Cloudflare</li>
-                        </ul>
-                    </div>
-                    <div class="stack__group" data-reveal>
-                        <h3 class="stack__group-title">Tools</h3>
-                        <ul class="stack__list">
-                            <li class="stack__item">VS Code</li>
-                            <li class="stack__item">IntelliJ IDEA</li>
-                            <li class="stack__item">GitHub</li>
-                        </ul>
+                    <div class="process__grid">
+                        <article class="process__step" data-reveal>
+                            <span class="process__num">01</span>
+                            <h3 class="process__title">Planejamento</h3>
+                            <p class="process__text">Entendo o objetivo, as necessidades e o escopo do projeto.</p>
+                        </article>
+                        <article class="process__step" data-reveal>
+                            <span class="process__num">02</span>
+                            <h3 class="process__title">Estrutura</h3>
+                            <p class="process__text">Defino a arquitetura, páginas, fluxo e banco de dados.</p>
+                        </article>
+                        <article class="process__step" data-reveal>
+                            <span class="process__num">03</span>
+                            <h3 class="process__title">Desenvolvimento</h3>
+                            <p class="process__text">Construo o front-end, back-end e integrações necessárias.</p>
+                        </article>
+                        <article class="process__step" data-reveal>
+                            <span class="process__num">04</span>
+                            <h3 class="process__title">Qualidade e Deploy</h3>
+                            <p class="process__text">Verifico responsividade e desempenho, e publico em produção.</p>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -297,104 +184,111 @@
         <section class="section" id="projetos">
             <div class="container">
                 <header class="section__head">
-                    <h2 class="section__title">Projetos</h2>
-                    <span class="section__index">04</span>
+                    <p class="section__eyebrow">O que eu já fiz</p>
+                    <h2 class="section__title">Meus trabalhos</h2>
                 </header>
 
-                <div class="cases__list">
+                <div class="projects__grid">
 
-                    <article class="case" data-reveal>
-                        <div class="case__head">
-                            <h3 class="case__title">HavenCloud</h3>
-                            <span class="case__type">Plataforma</span>
-                        </div>
-                        <p class="case__desc">
-                            Projeto web voltado para hospedagem e infraestrutura.
-                        </p>
-                        <div class="case__right">
-                            <div>
-                                <p class="case__meta-label">Status</p>
-                                <span class="case__status">Ativo</span>
+                    <article class="project" data-reveal>
+                        <div class="project__thumb">
+                            <div class="project__thumb-grad grad-haven">
+                                <span class="project__thumb-letter">H</span>
                             </div>
-                            <a href="https://havencloud.host" target="_blank" rel="noopener" class="case__link">
-                                Visitar projeto <span class="arrow" aria-hidden="true">→</span>
-                            </a>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__role">Plataforma</p>
+                            <h3 class="project__title">HavenCloud</h3>
+                            <p class="project__desc">Projeto web voltado para hospedagem e infraestrutura.</p>
+                            <div class="project__techs">
+                                <span class="project__tech">Next.js</span>
+                                <span class="project__tech">TypeScript</span>
+                                <span class="project__tech">Linux</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://havencloud.host" target="_blank" rel="noopener" class="project__link project__link--site">Visitar site</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="case" data-reveal>
-                        <div class="case__head">
-                            <h3 class="case__title">LightBux</h3>
-                            <span class="case__type">Web Platform</span>
-                        </div>
-                        <p class="case__desc">
-                            Plataforma web própria para organizar produtos e serviços digitais.
-                        </p>
-                        <div class="case__right">
-                            <div>
-                                <p class="case__meta-label">Status</p>
-                                <span class="case__status">Ativo</span>
+                    <article class="project" data-reveal>
+                        <div class="project__thumb">
+                            <div class="project__thumb-grad grad-light">
+                                <span class="project__thumb-letter">L</span>
                             </div>
-                            <a href="https://lightbux.online" target="_blank" rel="noopener" class="case__link">
-                                Visitar projeto <span class="arrow" aria-hidden="true">→</span>
-                            </a>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__role">Web Platform</p>
+                            <h3 class="project__title">LightBux</h3>
+                            <p class="project__desc">Plataforma web própria para organizar produtos e serviços digitais.</p>
+                            <div class="project__techs">
+                                <span class="project__tech">Next.js</span>
+                                <span class="project__tech">TypeScript</span>
+                                <span class="project__tech">Supabase</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://lightbux.online" target="_blank" rel="noopener" class="project__link project__link--site">Visitar site</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="case" data-reveal>
-                        <div class="case__head">
-                            <h3 class="case__title">MotterCloud</h3>
-                            <span class="case__type">Website</span>
-                        </div>
-                        <p class="case__desc">
-                            Projeto web relacionado a cloud e hospedagem.
-                        </p>
-                        <div class="case__right">
-                            <div>
-                                <p class="case__meta-label">Status</p>
-                                <span class="case__status">Ativo</span>
+                    <article class="project" data-reveal>
+                        <div class="project__thumb">
+                            <div class="project__thumb-grad grad-mott">
+                                <span class="project__thumb-letter">M</span>
                             </div>
-                            <a href="https://mottercloud.vercel.app" target="_blank" rel="noopener" class="case__link">
-                                Visitar projeto <span class="arrow" aria-hidden="true">→</span>
-                            </a>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__role">Website</p>
+                            <h3 class="project__title">MotterCloud</h3>
+                            <p class="project__desc">Projeto web relacionado a cloud e hospedagem.</p>
+                            <div class="project__techs">
+                                <span class="project__tech">Next.js</span>
+                                <span class="project__tech">Vercel</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://mottercloud.vercel.app" target="_blank" rel="noopener" class="project__link project__link--site">Visitar site</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="case" data-reveal>
-                        <div class="case__head">
-                            <h3 class="case__title">MagmaKz</h3>
-                            <span class="case__type">Website</span>
-                        </div>
-                        <p class="case__desc">
-                            Projeto web desenvolvido anteriormente.
-                        </p>
-                        <div class="case__right">
-                            <div>
-                                <p class="case__meta-label">Status</p>
-                                <span class="case__status case__status--previous">Anterior</span>
+                    <article class="project" data-reveal>
+                        <div class="project__thumb">
+                            <div class="project__thumb-grad grad-magma">
+                                <span class="project__thumb-letter">M</span>
                             </div>
-                            <a href="https://magmakz.online" target="_blank" rel="noopener" class="case__link">
-                                Visitar projeto <span class="arrow" aria-hidden="true">→</span>
-                            </a>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__role">Website</p>
+                            <h3 class="project__title">MagmaKz</h3>
+                            <p class="project__desc">Projeto web desenvolvido anteriormente.</p>
+                            <div class="project__techs">
+                                <span class="project__tech">JavaScript</span>
+                                <span class="project__tech">Vercel</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://magmakz.online" target="_blank" rel="noopener" class="project__link project__link--site">Visitar site</a>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="case" data-reveal>
-                        <div class="case__head">
-                            <h3 class="case__title">ZokoInfo</h3>
-                            <span class="case__type">Website</span>
-                        </div>
-                        <p class="case__desc">
-                            Projeto web desenvolvido para uma plataforma de informações.
-                        </p>
-                        <div class="case__right">
-                            <div>
-                                <p class="case__meta-label">Status</p>
-                                <span class="case__status case__status--previous">Anterior</span>
+                    <article class="project" data-reveal>
+                        <div class="project__thumb">
+                            <div class="project__thumb-grad grad-zoko">
+                                <span class="project__thumb-letter">Z</span>
                             </div>
-                            <a href="https://zokoinfo.vercel.app" target="_blank" rel="noopener" class="case__link">
-                                Visitar projeto <span class="arrow" aria-hidden="true">→</span>
-                            </a>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__role">Website</p>
+                            <h3 class="project__title">ZokoInfo</h3>
+                            <p class="project__desc">Projeto web desenvolvido para uma plataforma de informações.</p>
+                            <div class="project__techs">
+                                <span class="project__tech">Next.js</span>
+                                <span class="project__tech">Supabase</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="https://zokoinfo.vercel.app" target="_blank" rel="noopener" class="project__link project__link--site">Visitar site</a>
+                            </div>
                         </div>
                     </article>
 
@@ -402,84 +296,26 @@
             </div>
         </section>
 
-        <hr class="divider" aria-hidden="true">
-
-        <!-- Experiência -->
-        <section class="section" id="experiencia">
-            <div class="container">
-                <header class="section__head">
-                    <h2 class="section__title">Experiência</h2>
-                    <span class="section__index">05</span>
-                </header>
-                <div class="exp__grid">
-                    <div class="exp__item" data-reveal>
-                        <strong class="exp__value">30+</strong>
-                        <span class="exp__label">Clientes atendidos</span>
-                    </div>
-                    <div class="exp__item" data-reveal>
-                        <strong class="exp__value">15+</strong>
-                        <span class="exp__label">Projetos desenvolvidos</span>
-                    </div>
-                    <div class="exp__item" data-reveal>
-                        <strong class="exp__value exp__value--plain">Projetos próprios</strong>
-                        <span class="exp__label">LightBux e outras plataformas<span class="exp__label-sub">em constante desenvolvimento</span></span>
-                    </div>
-                    <div class="exp__item" data-reveal>
-                        <strong class="exp__value exp__value--plain">Full Stack</strong>
-                        <span class="exp__label">Front-end + Back-end<span class="exp__label-sub">sites, apps e sistemas</span></span>
-                    </div>
+        <div class="container" style="margin-top:0;">
+            <section class="cta" data-reveal>
+                <p class="cta__eyebrow">Seu projeto, sua ideia</p>
+                <h2 class="cta__title">Tem uma ideia? <span class="highlight">Vamos desenvolvê-la.</span></h2>
+                <p class="cta__text">
+                    Desde a concepção até o deploy, posso construir seu site ou aplicação com foco em
+                    qualidade, performance e boa experiência.
+                </p>
+                <div class="cta__chips">
+                    <span class="chip">Simplicidade</span>
+                    <span class="chip">Desempenho</span>
+                    <span class="chip">Design</span>
+                    <span class="chip">Parceria</span>
                 </div>
-            </div>
-        </section>
-
-        <hr class="divider" aria-hidden="true">
-
-        <!-- Processo -->
-        <section class="section" id="processo">
-            <div class="container">
-                <header class="section__head">
-                    <h2 class="section__title">Como trabalho</h2>
-                    <span class="section__index">06</span>
-                </header>
-                <div class="process__list">
-                    <div class="process__item" data-reveal>
-                        <span class="process__num">01</span>
-                        <div class="process__body">
-                            <h3 class="process__title">Entendimento</h3>
-                            <p class="process__text">Entendo o objetivo e as necessidades do projeto.</p>
-                        </div>
-                    </div>
-                    <div class="process__item" data-reveal>
-                        <span class="process__num">02</span>
-                        <div class="process__body">
-                            <h3 class="process__title">Estrutura</h3>
-                            <p class="process__text">Defino a arquitetura, páginas e fluxo da aplicação.</p>
-                        </div>
-                    </div>
-                    <div class="process__item" data-reveal>
-                        <span class="process__num">03</span>
-                        <div class="process__body">
-                            <h3 class="process__title">Desenvolvimento</h3>
-                            <p class="process__text">Construo o front-end, back-end e integrações necessárias.</p>
-                        </div>
-                    </div>
-                    <div class="process__item" data-reveal>
-                        <span class="process__num">04</span>
-                        <div class="process__body">
-                            <h3 class="process__title">Testes</h3>
-                            <p class="process__text">Verifico responsividade, funcionamento e desempenho.</p>
-                        </div>
-                    </div>
-                    <div class="process__item" data-reveal>
-                        <span class="process__num">05</span>
-                        <div class="process__body">
-                            <h3 class="process__title">Deploy</h3>
-                            <p class="process__text">Publico o projeto e preparo o ambiente para produção.</p>
-                        </div>
-                    </div>
+                <div class="cta__actions">
+                    <a href="https://github.com/Mkkkz" target="_blank" rel="noopener" class="btn btn--glass">GitHub</a>
+                    <a href="#contato" class="btn btn--primary">Vamos conversar</a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <hr class="divider" aria-hidden="true">
 
@@ -487,40 +323,64 @@
         <section class="section" id="contato">
             <div class="container">
                 <header class="section__head">
-                    <h2 class="section__title">Contato</h2>
-                    <span class="section__index">07</span>
+                    <p class="section__eyebrow">Contatos</p>
+                    <h2 class="section__title">Me mostre suas ideias</h2>
                 </header>
+
                 <div class="contact__wrap">
                     <div>
-                        <h3 class="contact__lead">
-                            Vamos <em>conversar?</em>
+                        <h3 class="contact__head">
+                            Vamos <span class="highlight">trabalhar juntos?</span>
                         </h3>
-                        <p class="contact__sub">
-                            Tem um projeto em mente, precisa de um site ou quer transformar uma ideia
-                            em uma aplicação? Entre em contato.
+                        <p class="contact__intro">
+                            Estou disponível para conversar sobre projetos, ideias ou oportunidades.
                         </p>
+                        <div class="contact__card">
+                            <span class="contact__card-badge">Disponível</span>
+                            <span class="contact__card-name">Miguel Inácio</span>
+                            <span class="contact__card-role">Desenvolvedor Full Stack</span>
+                            <span class="contact__card-loc">Belo Horizonte, MG</span>
+                        </div>
+                        <div class="contact__socials">
+                            <a href="https://github.com/Mkkkz" target="_blank" rel="noopener" class="contact__social">
+                                <span>Github</span>
+                                <span class="icon" aria-hidden="true">↗</span>
+                            </a>
+                            <a href="mailto:miguelinacio.dev@gmail.com" class="contact__social">
+                                <span>E-mail</span>
+                                <span class="icon" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="contact__social">
+                                <span>Discord</span>
+                                <span class="icon" aria-hidden="true">·</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact__links">
-                        <a href="mailto:miguelinacio.dev@gmail.com" class="contact__link">
-                            <span class="contact__link-label">Email</span>
-                            <span class="contact__link-value">miguelinacio.dev@gmail.com</span>
-                            <span class="contact__link-icon" aria-hidden="true">↗</span>
-                        </a>
-                        <a href="https://github.com/Mkkkz" target="_blank" rel="noopener" class="contact__link">
-                            <span class="contact__link-label">GitHub</span>
-                            <span class="contact__link-value">github.com/Mkkkz</span>
-                            <span class="contact__link-icon" aria-hidden="true">↗</span>
-                        </a>
-                        <div class="contact__link">
-                            <span class="contact__link-label">Discord</span>
-                            <span class="contact__link-value">oliveira.dev.dlc</span>
-                            <span class="contact__link-icon" aria-hidden="true">·</span>
+
+                    <div class="contact__form">
+                        <div class="contact__email">
+                            <span class="contact__email-label">Meu E-mail</span>
+                            <span class="contact__email-value" id="emailValue">miguelinacio.dev@gmail.com</span>
+                            <button class="contact__email-copy" id="copyEmail" type="button">Copiar</button>
                         </div>
-                        <div class="contact__link">
-                            <span class="contact__link-label">Base</span>
-                            <span class="contact__link-value">Rio de Janeiro, Brasil</span>
-                            <span class="contact__link-icon" aria-hidden="true">·</span>
-                        </div>
+
+                        <p class="contact__or">OU</p>
+
+                        <form class="form" action="mailto:miguelinacio.dev@gmail.com" method="post" enctype="text/plain">
+                            <div class="form__field">
+                                <label class="form__label" for="nome">Nome</label>
+                                <input class="form__input" type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="email">E-mail</label>
+                                <input class="form__input" type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="mensagem">Mensagem</label>
+                                <textarea class="form__textarea" id="mensagem" name="mensagem" placeholder="Conte sobre seu projeto..." required></textarea>
+                            </div>
+                            <button class="btn btn--primary" type="submit" style="width:100%;">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -531,19 +391,15 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__brand">
-                    <span class="footer__name">Miguel Inácio</span>
-                    <span class="footer__role">Developer</span>
-                </div>
+                <span class="footer__brand">Miguel Inácio</span>
                 <nav class="footer__links" aria-label="Links de contato">
                     <a href="https://github.com/Mkkkz" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+                    <a href="mailto:miguelinacio.dev@gmail.com" class="footer__link">E-mail</a>
                     <span class="footer__link">Discord</span>
-                    <a href="mailto:miguelinacio.dev@gmail.com" class="footer__link">Email</a>
                 </nav>
             </div>
             <div class="footer__bottom">
-                <span class="footer__copy">© 2026 Miguel Inácio</span>
-                <span class="footer__loc">Rio de Janeiro, Brasil</span>
+                <span class="footer__copy">© 2026 Miguel Inácio. Todos os direitos reservados.</span>
             </div>
         </div>
     </footer>
