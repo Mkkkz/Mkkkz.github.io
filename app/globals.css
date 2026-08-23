@@ -158,3 +158,19 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Marquee de tecnologias */
+.marquee-track {
+  animation: marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.group\/marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
