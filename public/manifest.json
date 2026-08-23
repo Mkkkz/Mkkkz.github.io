@@ -2,7 +2,7 @@
   "name": "Miguel Inácio — Developer",
   "short_name": "Miguel Inácio",
   "description": "Desenvolvo sites, aplicações web e sistemas completos, do front-end ao back-end.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#000000",
