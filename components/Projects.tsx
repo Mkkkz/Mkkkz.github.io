@@ -10,9 +10,19 @@ interface Project {
   desc: string;
   techs: string[];
   site: string;
+  featured?: boolean;
 }
 
 const projects: Project[] = [
+  {
+    image: "/assets/images/MonsterEdu.png",
+    role: "Projeto Conceitual — Frontend / UI & UX",
+    title: "MonsterEdu",
+    desc: "Landing page conceitual inspirada na identidade visual da Monster Energy, criada para praticar desenvolvimento frontend, direção visual, animações e experiências interativas.",
+    techs: ["HTML", "CSS", "JavaScript", "Animações CSS", "Interações JS", "Design Responsivo"],
+    site: "https://monsteredu.vercel.app",
+    featured: true,
+  },
   {
     image: "/assets/images/HavenCloud.png",
     badge: "Novo",
@@ -74,15 +84,32 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p) => (
-            <Reveal key={p.title}>
-              <article className="group flex flex-col overflow-hidden rounded-[18px] border border-white/10 bg-[var(--color-card)] transition-all duration-200 hover:-translate-y-[3px] hover:border-white/20 hover:bg-[var(--color-card-hover)]">
-                <div className="relative h-[190px] overflow-hidden">
+            <Reveal
+              key={p.title}
+              className={p.featured ? "md:col-span-2" : undefined}
+            >
+              <article
+                className={`group flex flex-col overflow-hidden rounded-[18px] border border-white/10 bg-[var(--color-card)] transition-all duration-200 hover:-translate-y-[3px] hover:border-white/20 hover:bg-[var(--color-card-hover)] ${
+                  p.featured ? "md:flex-row" : ""
+                }`}
+              >
+                <div
+                  className={`relative overflow-hidden ${
+                    p.featured
+                      ? "h-[220px] md:h-auto md:min-h-[320px] md:w-[58%]"
+                      : "h-[190px]"
+                  }`}
+                >
                   <Image
                     src={p.image}
                     alt={`Print do projeto ${p.title}`}
                     fill
-                    sizes="(max-width: 768px) 100vw, 546px"
-                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                    sizes={
+                      p.featured
+                        ? "(max-width: 768px) 100vw, 650px"
+                        : "(max-width: 768px) 100vw, 546px"
+                    }
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                   {p.badge && (
                     <span className="absolute left-[14px] top-[14px] rounded-full bg-[var(--color-danger)] px-3 py-[5px] text-[0.68rem] font-bold uppercase tracking-[0.1em] text-white">
@@ -95,7 +122,9 @@ export default function Projects() {
                     {p.role}
                   </p>
                   <h3 className="mb-3 text-[1.5rem] font-bold tracking-tight">{p.title}</h3>
-                  <p className="mb-5 flex-1 text-[0.92rem] text-[var(--color-muted)]">{p.desc}</p>
+                  <p className="mb-5 flex-1 text-[0.92rem] leading-relaxed text-[var(--color-muted)]">
+                    {p.desc}
+                  </p>
                   <div className="mb-6 flex flex-wrap gap-2">
                     {p.techs.map((t) => (
                       <span
@@ -106,17 +135,31 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div>
+                  <div className="flex flex-wrap items-center gap-3">
                     <a
                       href={p.site}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent-nav)] px-[18px] py-[9px] text-[0.85rem] font-semibold text-white transition-[filter] duration-200 hover:brightness-[1.3]"
                     >
-                      Visitar site
+                      Ver projeto
                       <ExternalLink size={14} aria-hidden="true" />
                     </a>
+                    {p.featured && (
+                      <a
+                        href="/monsteredu/"
+                        className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-[18px] py-[9px] text-[0.85rem] font-semibold text-[var(--color-ink)] transition-colors hover:border-white/20 hover:bg-white/10"
+                      >
+                        Detalhes
+                      </a>
+                    )}
                   </div>
+                  {p.featured && (
+                    <p className="mt-4 text-[0.72rem] leading-relaxed text-[var(--color-faint)]">
+                      Projeto conceitual desenvolvido para fins de estudo. Não possui vínculo oficial
+                      com a Monster Energy.
+                    </p>
+                  )}
                 </div>
               </article>
             </Reveal>
